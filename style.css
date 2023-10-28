@@ -1,0 +1,158 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: azure;
+}
+.flex-contenedor{
+    width: 90%;
+    height: 100vh;
+    border: 1px solid red;
+    margin: 0 auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* .caja{
+    width: 200px;
+    line-height: 100px;
+    margin: 5px;
+    border: 2px solid rgb(0, 191, 255);
+    text-align: center;
+} */
+head{
+    width: 100%;
+}
+nav{
+    width: 100%;
+    /* los 60 */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: coral;
+    padding: 2rem;
+}
+nav ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 30px;
+}
+ul li{
+    list-style: none;
+}
+/* .section{
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    gap: 5px;
+}
+.caja{
+    border: 1px solid green;
+    width: 33%;
+    text-align: center;
+    padding: 2rem 0;
+    height: 300px;
+}
+.btn{
+    padding: .5rem 2rem;
+    border-radius: 10px;
+    background-color: aqua;
+    border: none;
+    color: azure;
+}
+.btn:hover{
+    background-color: rgb(42, 29, 218);
+}
+.img{
+    width:90px;
+    
+}
+
+.caja1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.div{
+    display: flex;
+    gap: 20px;
+}  */
+/* Flexfrid */
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* se restan 60 por que son del nav */
+    height: calc(100vh - 60px); 
+    /* border: 2px solid rgb(0, 255, 4); */
+}
+.galeria{
+    /* border: 1px solid red; */
+    width: 90%;
+    /* tamaño */
+    height: 80%;
+    margin: 0 auto;
+    /* hay que poner grid para usarlo */
+    display: grid;
+    grid-template-columns: repeat(4,24%);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+}
+.item{
+    background-color: aqua;
+}
+/* Imagen 1 */
+.caja1{
+    background: url(img/cloud\ 1.jpg) no-repeat center/cover;
+    /* grid colum desde que columna */
+    grid-column: 2/3;
+    /* grid row desde que fila */
+    grid-row: 2/3;
+}
+.caja2{
+    background: url(img/2.jpg) no-repeat center/cover;
+    grid-column: 3/5;
+    grid-row: 1/2;
+}
+.item:nth-child(3){
+    background: url(img/4.jpg) no-repeat center/cover;
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+.item:nth-child(4){
+    background: url(img/3.jpg) no-repeat center/cover;
+    /* fila/columna/fila/columna/ */
+    grid-area: 2/4/4/5;
+}
+.item:nth-child(5){
+    background: url(img/5.jpg) no-repeat center/cover;
+    grid-area: 3/1/4/3;
+}
+.item:nth-child(6){
+    background: url(img/6.jpg) no-repeat center/cover;
+    grid-area: 1/2/2/3;
+}
+.caja7{
+    background: url(img/7.jpg) no-repeat center/cover;
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+.caja8{
+    background: url(img/8.jpg) no-repeat center/cover;
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
